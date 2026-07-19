@@ -1,0 +1,130 @@
+<svg viewBox="0 0 960 320" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <!-- ======================= background ======================= -->
+  <rect x="0" y="0" width="960" height="320" rx="14" fill="#0f172a"/>
+
+  <!-- ======================= header ======================= -->
+  <text x="48" y="52" fill="#e2e8f0" font-size="21" font-weight="700" letter-spacing="2.5">OLIST E-COMMERCE DATA PIPELINE</text>
+  <text x="48" y="76" fill="#64748b" font-size="12.5" letter-spacing="1">RAW CSV&#160;&#160;&#8594;&#160;&#160;PYTHON ETL&#160;&#160;&#8594;&#160;&#160;MYSQL WAREHOUSE&#160;&#160;&#8594;&#160;&#160;SQL ANALYTICS</text>
+  <line x1="48" y1="92" x2="912" y2="92" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ======================= stage 1 : raw csv files ======================= -->
+  <g>
+    <rect x="66" y="142" width="86" height="62" rx="6" fill="#1e293b" stroke="#334155"/>
+    <rect x="58" y="134" width="86" height="62" rx="6" fill="#1e293b" stroke="#334155"/>
+    <rect x="50" y="126" width="86" height="62" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.2"/>
+    <text x="93" y="152" fill="#94a3b8" font-size="10.5" text-anchor="middle" letter-spacing="0.5">olist_*.csv</text>
+    <text x="93" y="170" fill="#e2e8f0" font-size="13" font-weight="600" text-anchor="middle">9 FILES</text>
+    <text x="101" y="226" fill="#64748b" font-size="11" text-anchor="middle">Kaggle source</text>
+  </g>
+
+  <!-- connector 1 -->
+  <line x1="152" y1="165" x2="204" y2="165" stroke="#334155" stroke-width="1.5"/>
+  <polygon points="204,165 197,161.5 197,168.5" fill="#334155"/>
+  <circle r="3.4" fill="#22d3ee">
+    <animateMotion dur="2.1s" begin="0s" repeatCount="indefinite" path="M152,165 L200,165"/>
+  </circle>
+  <circle r="3.4" fill="#22d3ee" opacity="0.75">
+    <animateMotion dur="2.1s" begin="0.7s" repeatCount="indefinite" path="M152,165 L200,165"/>
+  </circle>
+  <circle r="3.4" fill="#22d3ee" opacity="0.5">
+    <animateMotion dur="2.1s" begin="1.4s" repeatCount="indefinite" path="M152,165 L200,165"/>
+  </circle>
+
+  <!-- ======================= stage 2 : extract ======================= -->
+  <g>
+    <rect x="206" y="126" width="120" height="78" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-width="1.2"/>
+    <text x="266" y="156" fill="#22d3ee" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1.5">EXTRACT</text>
+    <text x="266" y="176" fill="#94a3b8" font-size="10.5" text-anchor="middle">schema validation</text>
+    <text x="266" y="191" fill="#94a3b8" font-size="10.5" text-anchor="middle">fail-fast checks</text>
+    <text x="266" y="226" fill="#64748b" font-size="11" text-anchor="middle">src/extract.py</text>
+  </g>
+
+  <!-- connector 2 -->
+  <line x1="326" y1="165" x2="378" y2="165" stroke="#334155" stroke-width="1.5"/>
+  <polygon points="378,165 371,161.5 371,168.5" fill="#334155"/>
+  <circle r="3.4" fill="#22d3ee">
+    <animateMotion dur="2.1s" begin="0.35s" repeatCount="indefinite" path="M326,165 L374,165"/>
+  </circle>
+  <circle r="3.4" fill="#22d3ee" opacity="0.6">
+    <animateMotion dur="2.1s" begin="1.05s" repeatCount="indefinite" path="M326,165 L374,165"/>
+  </circle>
+
+  <!-- ======================= stage 3 : transform ======================= -->
+  <g>
+    <rect x="380" y="126" width="132" height="78" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+    <text x="446" y="156" fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1.5">TRANSFORM</text>
+    <text x="446" y="176" fill="#94a3b8" font-size="10.5" text-anchor="middle">pandas &#183; clean &#183; dedupe</text>
+    <text x="446" y="191" fill="#94a3b8" font-size="10.5" text-anchor="middle">fix source misspellings</text>
+    <text x="446" y="226" fill="#64748b" font-size="11" text-anchor="middle">src/transform.py</text>
+  </g>
+
+  <!-- connector 3 : dots change colour after transform -->
+  <line x1="512" y1="165" x2="564" y2="165" stroke="#334155" stroke-width="1.5"/>
+  <polygon points="564,165 557,161.5 557,168.5" fill="#334155"/>
+  <circle r="3.4" fill="#34d399">
+    <animateMotion dur="2.1s" begin="0.15s" repeatCount="indefinite" path="M512,165 L560,165"/>
+  </circle>
+  <circle r="3.4" fill="#34d399" opacity="0.6">
+    <animateMotion dur="2.1s" begin="0.85s" repeatCount="indefinite" path="M512,165 L560,165"/>
+  </circle>
+  <circle r="3.4" fill="#34d399" opacity="0.35">
+    <animateMotion dur="2.1s" begin="1.55s" repeatCount="indefinite" path="M512,165 L560,165"/>
+  </circle>
+
+  <!-- ======================= stage 4 : mysql warehouse (cylinder) ======================= -->
+  <g>
+    <path d="M 566 138 A 62 13 0 0 1 690 138 L 690 192 A 62 13 0 0 1 566 192 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+    <ellipse cx="628" cy="138" rx="62" ry="13" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+    <ellipse cx="628" cy="138" rx="62" ry="13" fill="#38bdf8" opacity="0.12">
+      <animate attributeName="opacity" values="0.12;0.3;0.12" dur="2.1s" repeatCount="indefinite"/>
+    </ellipse>
+    <text x="628" y="167" fill="#38bdf8" font-size="13.5" font-weight="700" text-anchor="middle" letter-spacing="1">MySQL</text>
+    <text x="628" y="184" fill="#94a3b8" font-size="10.5" text-anchor="middle">9 tables &#183; FK integrity</text>
+    <text x="628" y="226" fill="#64748b" font-size="11" text-anchor="middle">idempotent load</text>
+  </g>
+
+  <!-- connector 4 -->
+  <line x1="690" y1="165" x2="742" y2="165" stroke="#334155" stroke-width="1.5"/>
+  <polygon points="742,165 735,161.5 735,168.5" fill="#334155"/>
+  <circle r="3.4" fill="#f59e0b">
+    <animateMotion dur="2.1s" begin="0.5s" repeatCount="indefinite" path="M690,165 L738,165"/>
+  </circle>
+  <circle r="3.4" fill="#f59e0b" opacity="0.55">
+    <animateMotion dur="2.1s" begin="1.2s" repeatCount="indefinite" path="M690,165 L738,165"/>
+  </circle>
+
+  <!-- ======================= stage 5 : analytics (animated bars) ======================= -->
+  <g>
+    <rect x="744" y="126" width="168" height="78" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="828" y="150" fill="#f59e0b" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1.5">ANALYTICS</text>
+
+    <!-- animated mini bar chart, baseline y = 196 -->
+    <rect x="778" width="15" fill="#f59e0b" opacity="0.9" rx="2" y="172" height="24">
+      <animate attributeName="height" values="24;38;24" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="172;158;172" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="800" width="15" fill="#fbbf24" opacity="0.85" rx="2" y="164" height="32">
+      <animate attributeName="height" values="32;18;32" dur="2.4s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="164;178;164" dur="2.4s" begin="0.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="822" width="15" fill="#f59e0b" opacity="0.9" rx="2" y="176" height="20">
+      <animate attributeName="height" values="20;40;20" dur="2.4s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="176;156;176" dur="2.4s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="844" width="15" fill="#fbbf24" opacity="0.85" rx="2" y="160" height="36">
+      <animate attributeName="height" values="36;26;36" dur="2.4s" begin="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="160;170;160" dur="2.4s" begin="0.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="866" width="15" fill="#f59e0b" opacity="0.9" rx="2" y="170" height="26">
+      <animate attributeName="height" values="26;42;26" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="170;154;170" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="770" y1="196" x2="890" y2="196" stroke="#334155" stroke-width="1"/>
+
+    <text x="828" y="226" fill="#64748b" font-size="11" text-anchor="middle">10 SQL analyses &#183; window functions</text>
+  </g>
+
+  <!-- ======================= footer strip ======================= -->
+  <line x1="48" y1="258" x2="912" y2="258" stroke="#1e293b" stroke-width="1"/>
+  <text x="480" y="284" fill="#475569" font-size="11.5" text-anchor="middle" letter-spacing="1">SCHEMA VALIDATION &#160;&#183;&#160; DEDUPLICATION &#160;&#183;&#160; REFERENTIAL INTEGRITY &#160;&#183;&#160; IDEMPOTENT RE-RUNS &#160;&#183;&#160; COHORTS &#183; RFM &#183; RANKINGS</text>
+</svg>
