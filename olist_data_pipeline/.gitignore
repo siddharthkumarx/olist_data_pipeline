@@ -1,0 +1,22 @@
+# Data never goes to Git - the pipeline rebuilds it
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Secrets
+.env
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# OS / editor
+.DS_Store
+.vscode/
